@@ -1,0 +1,61 @@
+\documentclass[22pt,a4paper,notitlepage]{article}
+
+%% Use your favourite packages here
+\usepackage[margin=0.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{times} 
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage{cancel}
+\usepackage{hyperref}
+
+\begin{document}
+\title{Title of your quick note}
+\author{Your Name}
+\date{\today} % Can also use a custom date
+\maketitle
+
+%%=================Start====================%%
+
+\noindent % Start line without indentation
+Write sentences using words and equations such as $x^3 - y = 0$. We can also write standalone equations like below
+
+$$ H \ket{\Psi} = E \ket{\Psi}.
+$$
+\\ % Line break without indentation
+More words.
+
+%% Use sections to organize
+\section{Section with numbers}
+
+\subsection{Subsection with numbers}
+
+\section*{Section without numbers}
+
+\subsection*{Subsection without numbers}
+
+Use \textit{align} to write multiple lines of equations as below
+
+\begin{align*}
+\ket{\Psi} 
+&:= \sum_{\mu} \: c_{\mu} \ket{\mu},
+\\
+E 
+&= \frac{\braket{\Psi | H | \Psi}}{\braket{\Psi|\Psi}},
+\end{align*}
+more words just below equations.
+\\ \\ % Line break without indentation
+We can also include equation numbers.
+
+\begin{align}
+\ket{\Psi} 
+&:= \sum_{\mu} \: c_{\mu} \ket{\mu},
+\\
+E 
+&= \frac{\braket{\Psi | H | \Psi}}{\braket{\Psi|\Psi}}.
+\end{align}
+
+\noindent
+We can create hyperlinks using \href{https://www.overleaf.com/learn/latex/Hyperlinks}{hyperref} and also \cancel{strikethrough} using the \textit{cancel} package.
+
+\end{document}
