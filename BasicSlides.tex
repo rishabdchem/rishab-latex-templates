@@ -1,0 +1,125 @@
+\documentclass[xcolor=dvipsnames]{beamer} 
+%% Add [xcolor=dvipsnames] to use beamer colors
+
+%------------------------------------
+
+%% Boadilla theme is used 
+\mode<presentation> {
+\usetheme{Boadilla}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number] %% For frame numbering
+}
+
+%------------------------------------
+
+%% For using footnote w/o numbers 
+\makeatletter
+\def\blfootnote{\gdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+%------------------------------------
+
+%% Add your favourite packages below 
+\usepackage{tikz} % Schematics
+\usepackage{xcolor} % Color
+\usepackage{amsmath} % Equations
+\usepackage{braket} % BraKet notation
+\usepackage{bm} % Bold equation
+\usepackage{graphicx} % Images
+
+%------------------------------------
+
+%% Title
+\title{\Large{\textbf{Title of your presentation}}}
+
+%% Default title color is blue. To change color:
+\setbeamercolor{title}{fg=Black, bg=Blue!20}
+%% fg = foreground, bg = background, ! = opacity
+
+%% Author
+\author{\large{Your Name}}
+
+%% Date (chosen today). Can be changed to a custom date
+\date{\today}
+
+%------------------------------------
+
+%% Start the document
+\begin{document}
+
+%% Title page
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%------------------------------------
+
+%% Default frametitle color is blue. To change color:
+\setbeamercolor{frametitle}{fg=Black, bg=Blue!20}
+
+%------------------------------------
+%% Start the frames/slides %%
+%------------------------------------
+
+
+%% Use section (and subsections) to organize
+\section{Section Name}
+
+\begin{frame}
+\frametitle{Frame title}
+
+We can add words, equations, images, etc.
+
+%% Add an image
+\centering
+%\includegraphics[width=0.7\linewidth]{FilePath/PictureFile.format}
+
+\end{frame}
+
+%----------------------------------------
+
+\begin{frame}
+\frametitle{Frame with bullet points}
+
+\begin{itemize}
+\setlength \itemsep{1.5 em} % Space between bullets
+
+\item<2-> This bullet appears\footnotemark[1]
+
+\item<3-> And then this
+
+\item<4-> And so on
+
+\item<5-> If a sentence is too long, we can choose 
+\\ where to break our line % Using \\
+
+\end{itemize}
+
+\footnotetext[1]{\tiny{Some footnote text}}
+\end{frame}
+
+%----------------------------------------
+
+\begin{frame}
+\frametitle{Frames vs slides}
+
+\only<1>{
+Usually frame and slide are interchangeable.
+}
+\only<2>{
+\center{But we can also have multiple slides in \textit{one} frame.}
+}
+\only<3>{
+\center{We can \textbf{highlight} using \alert{red} or a {\color{RoyalPurple} specific} color}
+}
+\only<4>{
+\center{We can also add color to the equations}
+
+$$ \color{RoyalPurple} 
+H \ket{\Psi} = E \ket{\Psi}
+$$
+}
+\end{frame}
+
+
+\end{document}
