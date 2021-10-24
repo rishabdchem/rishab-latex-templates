@@ -1,0 +1,245 @@
+%------------------------------------------------------
+%% Well, it is not that fancy!
+%%
+%% The goal is to create minimal but interesting 
+%% slides with beamer which can replace powerpoint.
+%% Use of tikz to create schematics is highly
+%% recommended.
+%%
+%% Acknowledgement: Dr Tom Henderson, Gaurav Harsha.
+%%
+%% Written by Rishab Dutta.
+%% https://github.com/rishabdchem/
+%------------------------------------------------------
+
+\documentclass[xcolor=dvipsnames]{beamer} 
+%% Add [xcolor=dvipsnames] to use beamer colors
+
+%------------------------------------
+
+%% Boadilla theme is used 
+\mode<presentation> {
+\usetheme{Boadilla}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number] %% For frame numbering
+}
+
+%------------------------------------
+
+%% For using footnote w/o numbers 
+\makeatletter
+\def\blfootnote{\gdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+%------------------------------------
+
+%% Add your favourite packages below 
+\usepackage{tikz} % Schematics
+\usepackage{xcolor} % Color
+\usepackage{amsmath} % Equations
+\usepackage{braket} % BraKet notation
+\usepackage{bm} % Bold equation
+\usepackage{graphicx} % Images
+
+%------------------------------------
+
+%% Title
+\title{\Large{Title of your presentation}}
+\setbeamercolor{title}{fg=Black}
+
+%------------------------------------
+
+%% Default title color is blue. To change color:
+%%\setbeamercolor{title}{fg=Black, bg=Blue!20}
+%% fg = foreground, bg = background, ! = opacity
+
+%% Note: you can have your own color, e.g.,
+%\definecolor{UniBlue}{RGB}{83,121,170}
+
+%------------------------------------
+
+%% Author
+\author{\large{\color{Black} Your Name} \\ \color{Black} Your Institution}
+
+%% Date and extra
+\date{\color{Black} Host Institution \\ \color{Black} Date} 
+%% \date{\today} is an alternative
+
+%------------------------------------
+
+%% Start the document
+\begin{document}
+
+%------------------------------------
+
+%% Title page
+\begin{frame}
+
+% Print the title page as the first slide
+\titlepage 
+
+%% If we want, we can add more things to the title page now
+
+% For example, logo of institution
+\centering
+%\includegraphics[width=0.1\textwidth]{FilePath/InstituteLogo}
+
+\end{frame}
+
+%------------------------------------
+
+%% Default frametitle color is  blue
+\setbeamercolor{frametitle}{fg=Brown}
+
+%------------------------------------
+
+%% Ok, most of the style things things are above.
+
+%------------------------------------
+%% Start the frames/slides %%
+%------------------------------------
+
+%% Use section (and subsections) to organize
+\section{Section Name}
+\subsection{Subsection Name}
+\subsubsection{Subsubsection Name}
+
+\begin{frame}
+\frametitle{Frame title}
+
+We can add words, equations, images, etc.
+
+%% Add an image
+\centering
+%\includegraphics[width=0.7\linewidth]{FilePath/PictureFile.format}
+
+\end{frame}
+
+%----------------------------------------
+
+\begin{frame}
+\frametitle{Frame with bullet points}
+
+\begin{itemize}
+\setlength \itemsep{1.5 em} % Space between bullets
+
+\item<2-> This bullet appears\footnotemark[1]
+
+\item<3-> And then this
+
+\item<4-> And so on
+
+\item<5-> If a sentence is too long, we can choose 
+\\ where to break our line % Using \\
+
+\end{itemize}
+
+\footnotetext[1]{\tiny{Some footnote text}}
+\end{frame}
+
+%----------------------------------------
+
+\begin{frame}
+\frametitle{Frames vs slides}
+
+\only<1>{
+Usually frame and slide are interchangeable.
+}
+\only<2>{
+\center{But we can also have multiple slides in \textit{one} frame.}
+}
+\only<3>{
+\center{We can \textbf{highlight} using \alert{red} or a {\color{RoyalPurple} specific} color}
+}
+\only<4>{
+\center{We can also add color to the equations}
+
+$$ \color{RoyalPurple} 
+H \ket{\Psi} = E \ket{\Psi}
+$$
+}
+\end{frame}
+
+
+%%------------------------------------
+%% Acknowledgement slide %%
+%%------------------------------------
+
+\begin{frame}
+
+\frametitle{Acknowledgements}
+\begin{columns}
+
+\begin{column}{0.3\textwidth}
+\footnotesize{
+
+{\large{\color{RoyalPurple} Experiments:}}
+
+\begin{itemize}
+\item Prof XYZ
+\item Dr ABC
+\end{itemize}
+
+{\large{\color{RoyalPurple} Simulations:}}
+
+\begin{itemize}
+\item IJK\footnotemark[1]
+\item Dr PQR\footnotemark[2]
+\end{itemize}
+
+{\large{\color{RoyalPurple} Discussions:}}
+
+\begin{itemize}
+\item DEF
+\item TUV
+\end{itemize}
+}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+%% Group picture
+%\includegraphics[width=\textwidth]{FilePath/GroupPic}
+\end{column}
+
+\end{columns}
+
+%%-----------------
+
+\vspace{1 em}
+\begin{columns}
+
+%% Logos
+
+\begin{column}{0.08\textwidth}
+%\includegraphics[width=\textwidth]{FilePath/Logo1}
+\end{column}
+
+\begin{column}{0.18\textwidth}
+%\includegraphics[width=\textwidth]{FilePath/Logo2}
+\end{column}
+
+\begin{column}{0.14\textwidth}
+%\includegraphics[width=\textwidth]{FilePath/Logo3}
+\end{column}
+
+\end{columns}  
+ 
+\footnotetext[1]{\tiny{https://something.com}}
+\footnotetext[2]{\tiny{https://somethingelse.com}}
+ 
+\end{frame}
+
+%%-------------------------------------
+%% Extra slides for Q and A.
+%%-------------------------------------
+
+\section{Extra}
+
+%% No frame numbers
+\begin{frame}[noframenumbering]
+\frametitle{Extra things}
+
+\end{frame}
+
+
+\end{document}
