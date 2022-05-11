@@ -11,8 +11,9 @@
 %% https://github.com/rishabdchem/
 %-----------------------------------------------------------------
 
-\documentclass[xcolor=dvipsnames]{beamer} 
+\documentclass[xcolor=dvipsnames, aspectratio=1610]{beamer} 
 %% Add [xcolor=dvipsnames] to use beamer colors
+%% Aspect ratio ranges from 169 to 1612
 
 %------------------------------------
 
@@ -122,14 +123,14 @@ We can add words, equations, images, etc.
 \begin{itemize}
 \setlength \itemsep{1.5 em} % Space between bullets
 
-\item<2-> This bullet appears\footnotemark[1]
-
-\item<3-> And then this
-
-\item<4-> And so on
-
-\item<5-> If a sentence is too long, we can choose 
-\\ where to break our line % Using \\
+   \item<2-> This bullet appears\footnotemark[1]
+   
+   \item<3-> And then this
+   
+   \item<4-> And so on
+   
+   \item<5-> If a sentence is too long, we can choose 
+             \\ where to break our line % Using \\
 
 \end{itemize}
 
@@ -153,8 +154,8 @@ Usually frame and slide are interchangeable.
 \only<4>{
 \center{We can also add color to the equations}
 
-$$ \color{RoyalPurple} 
-H \ket{\Psi} = E \ket{\Psi}
+$$ H \textcolor{blue}{\ket{\Psi}} 
+= E \ket{\Psi}
 $$
 }
 \end{frame}
@@ -165,40 +166,49 @@ $$
 %%------------------------------------
 
 \begin{frame}
-
 \frametitle{Acknowledgements}
+
 \begin{columns}
 
-\begin{column}{0.3\textwidth}
-\footnotesize{
-
-{\large{\color{RoyalPurple} Experiments:}}
-
-\begin{itemize}
-\item Prof XYZ
-\item Dr ABC
-\end{itemize}
-
-{\large{\color{RoyalPurple} Simulations:}}
-
-\begin{itemize}
-\item IJK\footnotemark[1]
-\item Dr PQR\footnotemark[2]
-\end{itemize}
-
-{\large{\color{RoyalPurple} Discussions:}}
-
-\begin{itemize}
-\item DEF
-\item TUV
-\end{itemize}
-}
-\end{column}
-
-\begin{column}{0.5\textwidth}
-%% Group picture
-%\includegraphics[width=\textwidth]{FilePath/GroupPic}
-\end{column}
+   \begin{column}{0.3\textwidth}
+   \footnotesize{
+   
+   {\large{\color{RoyalPurple} Experiments:}}
+   
+   \begin{itemize}
+   
+      \item Prof XYZ
+      
+      \item Dr ABC
+   
+   \end{itemize}
+   
+   {\large{\color{RoyalPurple} Simulations:}}
+   
+   \begin{itemize}
+   
+      \item IJK\footnotemark[1]
+   
+      \item Dr PQR\footnotemark[2]
+   
+   \end{itemize}
+   
+   {\large{\color{RoyalPurple} Discussions:}}
+   
+   \begin{itemize}
+   
+      \item DEF
+      
+      \item TUV
+   
+   \end{itemize}
+   }
+   \end{column}
+   
+   \begin{column}{0.5\textwidth}
+   %% Group picture
+   %\includegraphics[width=\textwidth]{FilePath/GroupPic}
+   \end{column}
 
 \end{columns}
 
@@ -209,23 +219,22 @@ $$
 
 %% Logos
 
-\begin{column}{0.08\textwidth}
-%\includegraphics[width=\textwidth]{FilePath/Logo1}
-\end{column}
-
-\begin{column}{0.18\textwidth}
-%\includegraphics[width=\textwidth]{FilePath/Logo2}
-\end{column}
-
-\begin{column}{0.14\textwidth}
-%\includegraphics[width=\textwidth]{FilePath/Logo3}
-\end{column}
+   \begin{column}{0.08\textwidth}
+   %\includegraphics[width=\textwidth]{FilePath/Logo1}
+   \end{column}
+   
+   \begin{column}{0.18\textwidth}
+   %\includegraphics[width=\textwidth]{FilePath/Logo2}
+   \end{column}
+   
+   \begin{column}{0.14\textwidth}
+   %\includegraphics[width=\textwidth]{FilePath/Logo3}
+   \end{column}
 
 \end{columns}  
  
 \footnotetext[1]{\tiny{https://something.com}}
 \footnotetext[2]{\tiny{https://somethingelse.com}}
- 
 \end{frame}
 
 %%-------------------------------------

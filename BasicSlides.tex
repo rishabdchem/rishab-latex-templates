@@ -5,8 +5,9 @@
 %% https://github.com/rishabdchem/
 %--------------------------------------------------
 
-\documentclass[xcolor=dvipsnames]{beamer} 
+\documentclass[xcolor=dvipsnames, aspectratio=1610]{beamer} 
 %% Add [xcolor=dvipsnames] to use beamer colors
+%% Aspect ratio ranges from 169 to 1612
 
 %------------------------------------
 
@@ -90,14 +91,14 @@ We can add words, equations, images, etc.
 \begin{itemize}
 \setlength \itemsep{1.5 em} % Space between bullets
 
-\item<2-> This bullet appears\footnotemark[1]
-
-\item<3-> And then this
-
-\item<4-> And so on
-
-\item<5-> If a sentence is too long, we can choose 
-\\ where to break our line % Using \\
+   \item<2-> This bullet appears\footnotemark[1]
+   
+   \item<3-> And then this
+   
+   \item<4-> And so on
+   
+   \item<5-> If a sentence is too long, we can choose 
+             \\ where to break our line % Using \\
 
 \end{itemize}
 
@@ -121,8 +122,8 @@ Usually frame and slide are interchangeable.
 \only<4>{
 \center{We can also add color to the equations}
 
-$$ \color{RoyalPurple} 
-H \ket{\Psi} = E \ket{\Psi}
+$$ H \textcolor{blue}{\ket{\Psi}} 
+= E \ket{\Psi}
 $$
 }
 \end{frame}
